@@ -30,7 +30,7 @@ namespace FreeCourse.Shared.Dtos
         {
             return new Response<T>
             {
-                Data = default(T),
+                Data = default,
                 StatusCode = statusCode,
                 IsSuccessful = true
             };

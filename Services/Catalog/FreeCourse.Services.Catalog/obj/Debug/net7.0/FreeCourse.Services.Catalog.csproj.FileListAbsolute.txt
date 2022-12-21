@@ -46,3 +46,6 @@ C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Serv
 C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Catalog\FreeCourse.Services.Catalog\bin\Debug\net7.0\runtimes\win\native\mongocrypt.dll
 C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Catalog\FreeCourse.Services.Catalog\bin\Debug\net7.0\FreeCourse.Shared.dll
 C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Catalog\FreeCourse.Services.Catalog\bin\Debug\net7.0\FreeCourse.Shared.pdb
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Catalog\FreeCourse.Services.Catalog\bin\Debug\net7.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Catalog\FreeCourse.Services.Catalog\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Catalog\FreeCourse.Services.Catalog\bin\Debug\net7.0\Newtonsoft.Json.dll
