@@ -29,13 +29,13 @@ namespace FreeCourse.Services.Catalog.Services.Concreate
 
         public async Task<Response<List<CourseDto>>> GetAllAsync()
         {
-            var courses = await _courseCollection.Find<Course>(course => true).ToListAsync();
+            var courses = await _courseCollection.Find(course => true).ToListAsync();
 
             if (courses.Any())
             {
                 foreach (var course in courses)
                 {
-                    course.Category = await _categoryCollection.Find<Category>(x => x.Id == course.CategoryId).FirstAsync();
+                    course.Category = await _categoryCollection.Find(x => x.Id == course.CategoryId).FirstAsync();
                 }
             }
             else

@@ -35,11 +35,13 @@ namespace FreeCourse.Services.Catalog.Services.Concreate
             return Response<List<CategoryDto>>.Success(categoriesDto, 200);
         }
 
-        public async Task<Response<CategoryDto>> CreateAsync(Category category)
+        public async Task<Response<CategoryDto>> CreateAsync(CategoryDto categoryDto)
         {
+            var category = _mapper.Map<Category>(categoryDto);
+
             await _categoryCollection.InsertOneAsync(category);
 
-            var categoryDto = _mapper.Map<CategoryDto>(category);
+            categoryDto = _mapper.Map<CategoryDto>(category);
 
             return Response<CategoryDto>.Success(categoryDto, 200);
         }
