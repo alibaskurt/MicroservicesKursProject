@@ -31,3 +31,16 @@ C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Serv
 C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Catalog\FreeCourse.Services.Catalog\obj\Debug\net7.0\FreeCourse.Services.Catalog.pdb
 C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Catalog\FreeCourse.Services.Catalog\obj\Debug\net7.0\FreeCourse.Services.Catalog.genruntimeconfig.cache
 C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Catalog\FreeCourse.Services.Catalog\obj\Debug\net7.0\ref\FreeCourse.Services.Catalog.dll
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Catalog\FreeCourse.Services.Catalog\bin\Debug\net7.0\AutoMapper.dll
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Catalog\FreeCourse.Services.Catalog\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Catalog\FreeCourse.Services.Catalog\bin\Debug\net7.0\DnsClient.dll
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Catalog\FreeCourse.Services.Catalog\bin\Debug\net7.0\MongoDB.Bson.dll
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Catalog\FreeCourse.Services.Catalog\bin\Debug\net7.0\MongoDB.Driver.dll
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Catalog\FreeCourse.Services.Catalog\bin\Debug\net7.0\MongoDB.Driver.Core.dll
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Catalog\FreeCourse.Services.Catalog\bin\Debug\net7.0\MongoDB.Libmongocrypt.dll
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Catalog\FreeCourse.Services.Catalog\bin\Debug\net7.0\SharpCompress.dll
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Catalog\FreeCourse.Services.Catalog\bin\Debug\net7.0\Snappier.dll
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Catalog\FreeCourse.Services.Catalog\bin\Debug\net7.0\ZstdSharp.dll
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Catalog\FreeCourse.Services.Catalog\bin\Debug\net7.0\runtimes\linux\native\libmongocrypt.so
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Catalog\FreeCourse.Services.Catalog\bin\Debug\net7.0\runtimes\osx\native\libmongocrypt.dylib
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Catalog\FreeCourse.Services.Catalog\bin\Debug\net7.0\runtimes\win\native\mongocrypt.dll
