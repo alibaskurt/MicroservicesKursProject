@@ -9,6 +9,7 @@
       "FreeCourse.Services.Catalog/1.0.0": {
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
+          "FreeCourse.Shared": "1.0.0",
           "Microsoft.AspNetCore.OpenApi": "7.0.1",
           "MongoDB.Driver": "2.18.0",
           "Swashbuckle.AspNetCore": "6.4.0"
@@ -230,6 +231,11 @@
             "fileVersion": "0.6.2.0"
           }
         }
+      },
+      "FreeCourse.Shared/1.0.0": {
+        "runtime": {
+          "FreeCourse.Shared.dll": {}
+        }
       }
     }
   },
@@ -434,6 +440,11 @@
       "sha512": "sha512-jPao/LdUNLUz8rn3H1D8W7wQbZsRZM0iayvWI4xGejJg3XJHT56gcmYdgmCGPdJF1UEBqUjucCRrFB+4HbJsbw==",
       "path": "zstdsharp.port/0.6.2",
       "hashPath": "zstdsharp.port.0.6.2.nupkg.sha512"
+    },
+    "FreeCourse.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }
