@@ -1,11 +1,12 @@
 ﻿using AutoMapper;
 using FreeCourse.Services.Catalog.Dtos;
 using FreeCourse.Services.Catalog.Models;
+using FreeCourse.Services.Catalog.Services.Abstract;
 using FreeCourse.Services.Catalog.Settings;
 using FreeCourse.Shared.Dtos;
 using MongoDB.Driver;
 
-namespace FreeCourse.Services.Catalog.Services
+namespace FreeCourse.Services.Catalog.Services.Concreate
 {
     //Burada Db den gelen category bilgilerini mapping yapacağımız için adına Repositor değilde Service dedim.
     //Daha profesyonel olması adına once ICategoryRepository vs oluşturulup service üzerinden bu interface çağrılabilirdi.
@@ -45,7 +46,7 @@ namespace FreeCourse.Services.Catalog.Services
 
         public async Task<Response<CategoryDto>> GetByIdAsync(string id)
         {
-            var category = await _categoryCollection.Find<Category>(x => x.Id == id).FirstOrDefaultAsync();
+            var category = await _categoryCollection.Find(x => x.Id == id).FirstOrDefaultAsync();
 
             if (category == null)
                 return Response<CategoryDto>.Fail("Category Not Found", 404);
@@ -54,6 +55,6 @@ namespace FreeCourse.Services.Catalog.Services
             return Response<CategoryDto>.Success(categoryDto, 200);
         }
 
-      
+
     }
 }

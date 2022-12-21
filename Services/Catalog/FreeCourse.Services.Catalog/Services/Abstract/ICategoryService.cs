@@ -2,7 +2,7 @@
 using FreeCourse.Services.Catalog.Models;
 using FreeCourse.Shared.Dtos;
 
-namespace FreeCourse.Services.Catalog.Services
+namespace FreeCourse.Services.Catalog.Services.Abstract
 {
     internal interface ICategoryService
     {

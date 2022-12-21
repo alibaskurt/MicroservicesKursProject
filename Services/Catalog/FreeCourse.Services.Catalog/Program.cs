@@ -1,4 +1,5 @@
-using FreeCourse.Services.Catalog.Services;
+using FreeCourse.Services.Catalog.Services.Abstract;
+using FreeCourse.Services.Catalog.Services.Concreate;
 using FreeCourse.Services.Catalog.Settings;
 using Microsoft.Extensions.Options;
 
@@ -25,7 +26,7 @@ builder.Services.AddSingleton<IDatabaseSettings>(sp =>
 });
 
 builder.Services.AddScoped<ICategoryService, CategoryService>();
-
+builder.Services.AddScoped<ICourseService, CourseService>();
 
 var app = builder.Build();
 
