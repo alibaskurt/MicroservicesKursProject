@@ -3,7 +3,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace FreeCourse.Services.Catalog.Models
 {
-    internal class Course
+    public class Course
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
@@ -12,7 +12,7 @@ namespace FreeCourse.Services.Catalog.Models
         public string Description { get; set; }
 
         [BsonRepresentation(BsonType.Decimal128)]
-        public string Price { get; set; }
+        public decimal Price { get; set; }
         public string Picture { get; set; }
 
         [BsonRepresentation(BsonType.DateTime)]

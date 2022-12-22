@@ -4,6 +4,9 @@ using FreeCourse.Services.Catalog.Models;
 using FreeCourse.Services.Catalog.Services.Abstract;
 using FreeCourse.Services.Catalog.Settings;
 using FreeCourse.Shared.Dtos;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Serializers;
+using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
 using System.Collections.Generic;
 
@@ -57,7 +60,7 @@ namespace FreeCourse.Services.Catalog.Services.Concreate
                 return Response<CourseDto>.Fail("Course Not Found", 404);
             }
 
-            course.Category = await _categoryCollection.Find(x => x.Id == course.Id).FirstAsync();
+            course.Category = await _categoryCollection.Find(x => x.Id == course.CategoryId).FirstAsync();
 
             var courseDto = _mapper.Map<CourseDto>(course);
             return Response<CourseDto>.Success(courseDto, 200);

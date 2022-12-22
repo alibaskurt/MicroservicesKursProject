@@ -1,12 +1,13 @@
 ﻿using FreeCourse.Services.Catalog.Dtos;
-using FreeCourse.Services.Catalog.Models;
 using FreeCourse.Services.Catalog.Services.Abstract;
 using FreeCourse.Shared.ControllerBases;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FreeCourse.Services.Catalog.Controllers
 {
-    internal class CategoryController : CustomControllerBase
+    [Route("api/[controller]")]
+    [ApiController]
+    public class CategoryController : CustomControllerBase
     {
         private readonly ICategoryService _categoryService;
 
@@ -15,6 +16,7 @@ namespace FreeCourse.Services.Catalog.Controllers
             _categoryService = categoryService;
         }
 
+        [HttpGet]
         public async Task<IActionResult> GetAll()
         {
             var response = await _categoryService.GetAllAsync();

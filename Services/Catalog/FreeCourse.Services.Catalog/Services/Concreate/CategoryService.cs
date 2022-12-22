@@ -10,7 +10,7 @@ namespace FreeCourse.Services.Catalog.Services.Concreate
 {
     //Burada Db den gelen category bilgilerini mapping yapacağımız için adına Repositor değilde Service dedim.
     //Daha profesyonel olması adına once ICategoryRepository vs oluşturulup service üzerinden bu interface çağrılabilirdi.
-    internal class CategoryService : ICategoryService
+    public class CategoryService : ICategoryService
     {
         private readonly IMongoCollection<Category> _categoryCollection;
         private readonly IMapper _mapper;
