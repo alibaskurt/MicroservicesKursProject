@@ -1,16 +1,21 @@
 ﻿using FreeCourse.IdentityServer.Dtos;
 using FreeCourse.IdentityServer.Models;
 using FreeCourse.Shared.Dtos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using static IdentityServer4.IdentityServerConstants;
 
 namespace FreeCourse.IdentityServer.Controllers
 {
-    [Route("api/[controller]")]
+    //Scope olarak belirttiğimiz IdentityServerConstants.LocalApi.ScopeName değerini gelen token içerisinde bekliyor.
+    [Authorize(LocalApi.PolicyName)] 
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class UserController : ControllerBase
     {
