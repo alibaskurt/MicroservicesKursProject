@@ -142,3 +142,5 @@ C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Iden
 C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\IdentityServer\FreeCourse.IdentityServer\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\IdentityServer\FreeCourse.IdentityServer\bin\Debug\netcoreapp3.1\Npgsql.dll
 C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\IdentityServer\FreeCourse.IdentityServer\bin\Debug\netcoreapp3.1\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\IdentityServer\FreeCourse.IdentityServer\bin\Debug\netcoreapp3.1\FreeCourse.Shared.dll
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\IdentityServer\FreeCourse.IdentityServer\bin\Debug\netcoreapp3.1\FreeCourse.Shared.pdb
