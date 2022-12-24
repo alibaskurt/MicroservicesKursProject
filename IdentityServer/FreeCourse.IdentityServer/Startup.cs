@@ -12,6 +12,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Components.Forms;
+using Microsoft.AspNetCore.Mvc;
+using System.Linq;
+using System.Net;
+using FreeCourse.Shared.Dtos;
+using System.Collections.Generic;
 
 namespace FreeCourse.IdentityServer
 {
@@ -28,7 +34,21 @@ namespace FreeCourse.IdentityServer
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+
+            services.AddLocalApiAuthentication();
+
+            services.AddControllersWithViews().ConfigureApiBehaviorOptions(options => {
+                options.InvalidModelStateResponseFactory = (errorContext) =>
+                {
+                    var responseErrors = new List<string>();
+                    var errors = errorContext.ModelState.Values;
+                    foreach(var error in errors)
+                    {
+                        responseErrors.Add(error.Errors.Select(x => x.ErrorMessage).ToList()[0]);
+                    }
+                    return new BadRequestObjectResult(Response<NoContent>.Fail(responseErrors, 400));
+                };
+            }); ;
 
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
@@ -60,7 +80,7 @@ namespace FreeCourse.IdentityServer
                 .AddGoogle(options =>
                 {
                     options.SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;
-                    
+
                     // register your IdentityServer with Google at https://console.developers.google.com
                     // enable the Google+ API
                     // set the redirect URI to https://localhost:5001/signin-google
@@ -86,6 +106,8 @@ namespace FreeCourse.IdentityServer
             {
                 endpoints.MapDefaultControllerRoute();
             });
+
+            app.UseAuthentication();
         }
     }
 }
