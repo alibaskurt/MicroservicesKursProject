@@ -33,6 +33,7 @@ namespace FreeCourse.IdentityServer
             }
         };
 
+        //Identity Server microservisi için token doğruladıktan sonra kullanıcıya ait erişilebilecek alanlar.
         public static IEnumerable<IdentityResource> IdentityResources => new IdentityResource[]
         {
             new IdentityResources.Email(),
@@ -59,6 +60,7 @@ namespace FreeCourse.IdentityServer
 
         //Token almak isteyen client tanımlaması burada yapılır.
         //Client buraya ClientId ve ClientSecret değeri ile gelicek. Hangi microservislere bu token ile erişicek bu ayarlama yapıldı.
+        //Client Cridential da refresh token yok. Resourse Owner da refresh token var.
         public static IEnumerable<Client> Clients =>
             new Client[]
             {
@@ -97,17 +99,29 @@ namespace FreeCourse.IdentityServer
                         new string(GrantType.ResourceOwnerPassword)
                     },
 
+                    //Kullanıcı logın olmasada refresh token ıle access token alınabilsin.
+                    AllowOfflineAccess = true,
+
                     //Scope lar hangi aud a aitse token içerisine o değeri basar.
                     AllowedScopes =
                     {
+                        IdentityServerConstants.LocalApi.ScopeName,
                         IdentityServerConstants.StandardScopes.Email,
-                        IdentityServerConstants.StandardScopes.OpenId,
+                        //Mutlaka kullanıcı Id olması gerekiyor.
+                        IdentityServerConstants.StandardScopes.OpenId, 
                         IdentityServerConstants.StandardScopes.Profile,
-                        IdentityServerConstants.StandardScopes.OfflineAccess
+                        //Refresh token donebilmek için tanımlandı. Kullanıcı o an login olmamıs olsada refresh token ile token alabiliriz.
+                        IdentityServerConstants.StandardScopes.OfflineAccess 
                     },
+                    //Access Token 1 saatliğine verilir.
                     AccessTokenLifetime = 1*60*60,
                     RefreshTokenExpiration = TokenExpiration.Absolute,
-                    AbsoluteRefreshTokenLifetime = (int)(DateTime.Now.AddDays(60)-DateTime.Now).TotalSeconds,
+
+                    //Refresh token ömrü 1 ay.
+                    //Her access token alındığında refresh token da dönülecek ve refresh tokenın omru artık yenıden 1 ay olucak
+                    AbsoluteRefreshTokenLifetime = (int)(DateTime.Now.AddDays(30)-DateTime.Now).TotalSeconds,
+
+                    //Refresh token 1 kere kullanılmasın tekrar kullanılabilir olsun.
                     RefreshTokenUsage = TokenUsage.ReUse
 
                 }
