@@ -1,10 +1,12 @@
 ﻿using FreeCourse.Services.Catalog.Dtos;
 using FreeCourse.Services.Catalog.Services.Abstract;
 using FreeCourse.Shared.ControllerBases;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FreeCourse.Services.Catalog.Controllers
 {
+    //[Authorize] Program cs içerisinde bir kerede hallettim. Tüm Controllerlara default Authorize attuributi eklendi.
     [Route("api/[controller]")]
     [ApiController]
     public class CategoryController : CustomControllerBase

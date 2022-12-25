@@ -34,7 +34,6 @@ namespace FreeCourse.IdentityServer
 
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddLocalApiAuthentication();
 
             services.AddControllersWithViews().ConfigureApiBehaviorOptions(options => {
@@ -67,7 +66,6 @@ namespace FreeCourse.IdentityServer
                 // see https://identityserver4.readthedocs.io/en/latest/topics/resources.html
                 options.EmitStaticAudienceClaim = true;
             })
-                .AddInMemoryIdentityResources(Config.IdentityResources)
                 .AddInMemoryApiResources(Config.ApiResources)
                 .AddInMemoryApiScopes(Config.ApiScopes)
                 .AddInMemoryClients(Config.Clients)
