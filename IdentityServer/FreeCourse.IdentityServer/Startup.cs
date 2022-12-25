@@ -18,6 +18,7 @@ using System.Linq;
 using System.Net;
 using FreeCourse.Shared.Dtos;
 using System.Collections.Generic;
+using FreeCourse.IdentityServer.Services;
 
 namespace FreeCourse.IdentityServer
 {
@@ -70,6 +71,10 @@ namespace FreeCourse.IdentityServer
                 .AddInMemoryApiScopes(Config.ApiScopes)
                 .AddInMemoryClients(Config.Clients)
                 .AddAspNetIdentity<ApplicationUser>();
+
+
+            builder.AddResourceOwnerValidator<IdentityServerResourceOwnerPasswordValidator>();
+
 
             // not recommended for production - you need to store your key material somewhere secure
             builder.AddDeveloperSigningCredential();
