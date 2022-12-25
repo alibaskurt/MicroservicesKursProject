@@ -6,15 +6,17 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.IdentityModel.JsonWebTokens;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
 using static IdentityServer4.IdentityServerConstants;
 
 namespace FreeCourse.IdentityServer.Controllers
 {
     //Scope olarak belirttiğimiz IdentityServerConstants.LocalApi.ScopeName değerini gelen token içerisinde bekliyor.
-    [Authorize(LocalApi.PolicyName)] 
+    [Authorize(LocalApi.PolicyName)]
     [Route("api/[controller]/[action]")]
     [ApiController]
     public class UserController : ControllerBase
@@ -42,6 +44,25 @@ namespace FreeCourse.IdentityServer.Controllers
                 return BadRequest(Response<NoContent>.Fail(result.Errors.Select(x => x.Description).ToList(), 400));
             }
             return NoContent();
+        }
+
+        public async Task<IActionResult> GetUser()
+        {
+            var userClaimId = User.Claims.FirstOrDefault(x => x.Type == JwtRegisteredClaimNames.Sub);
+
+            if (userClaimId == null)
+            {
+                return BadRequest();
+            }
+
+            var user = await _userManager.FindByIdAsync(userClaimId.Value);
+
+            if (user == null)
+            {
+                return BadRequest();
+            }
+
+            return Ok(new { user.Id, user.Email, user.UserName, user.City });
         }
     }
 }
