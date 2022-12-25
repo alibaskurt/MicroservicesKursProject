@@ -1,13 +1,22 @@
 using FreeCourse.Services.Catalog.Services.Abstract;
 using FreeCourse.Services.Catalog.Services.Concreate;
 using FreeCourse.Services.Catalog.Settings;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+
+//Tüm class seviyesinde Authorize atturibute eklendi.
+builder.Services.AddControllers(options =>
+{
+    options.Filters.Add(new AuthorizeFilter());
+});
+    
+    
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -27,6 +36,22 @@ builder.Services.AddSingleton<IDatabaseSettings>(sp =>
 
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<ICourseService, CourseService>();
+
+
+//Microservisi koruma altýna aldým 
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+{
+    //Token daðýtmaktan sorumlu arkadasý veriyoruz. Býzým Porjemizde IdentityServer Microservisi.
+    //Bu microservise private key ile imzalanmýþ bir token geldiðinde public key ile doðrulama yapýcak.
+    //Public keyi de belirttiðimiz URL üzerinden alýcak.
+    options.Authority = builder.Configuration["IdentityServerURL"];
+
+    //Gelen token aud içerisinde resource_catalog olmasý gerekiyor.
+    options.Audience = "resource_catalog";
+
+    options.RequireHttpsMetadata = false;
+
+});
 
 var app = builder.Build();
 
