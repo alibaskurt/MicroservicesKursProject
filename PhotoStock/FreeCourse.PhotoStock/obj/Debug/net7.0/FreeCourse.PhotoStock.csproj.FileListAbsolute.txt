@@ -32,3 +32,15 @@ C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Phot
 C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\PhotoStock\FreeCourse.PhotoStock\obj\Debug\net7.0\FreeCourse.PhotoStock.pdb
 C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\PhotoStock\FreeCourse.PhotoStock\obj\Debug\net7.0\FreeCourse.PhotoStock.genruntimeconfig.cache
 C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\PhotoStock\FreeCourse.PhotoStock\obj\Debug\net7.0\ref\FreeCourse.PhotoStock.dll
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\PhotoStock\FreeCourse.PhotoStock\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\PhotoStock\FreeCourse.PhotoStock\bin\Debug\net7.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\PhotoStock\FreeCourse.PhotoStock\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\PhotoStock\FreeCourse.PhotoStock\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\PhotoStock\FreeCourse.PhotoStock\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\PhotoStock\FreeCourse.PhotoStock\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\PhotoStock\FreeCourse.PhotoStock\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\PhotoStock\FreeCourse.PhotoStock\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\PhotoStock\FreeCourse.PhotoStock\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\PhotoStock\FreeCourse.PhotoStock\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\PhotoStock\FreeCourse.PhotoStock\bin\Debug\net7.0\FreeCourse.Shared.dll
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\PhotoStock\FreeCourse.PhotoStock\bin\Debug\net7.0\FreeCourse.Shared.pdb
