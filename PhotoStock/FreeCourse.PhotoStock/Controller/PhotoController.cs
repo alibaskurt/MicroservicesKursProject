@@ -1,12 +1,20 @@
 ﻿using FreeCourse.PhotoStock.Dtos;
 using FreeCourse.Shared.ControllerBases;
 using FreeCourse.Shared.Dtos;
+<<<<<<< HEAD
+=======
+using Microsoft.AspNetCore.Authorization;
+>>>>>>> 9ec69e8db6b5c5aa767d48090463f294838d0d26
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FreeCourse.PhotoStock.Controller
 {
+<<<<<<< HEAD
     [Route("api/[controller]")]
+=======
+    [Route("api/[controller]/[action]")]
+>>>>>>> 9ec69e8db6b5c5aa767d48090463f294838d0d26
     [ApiController]
     public class PhotoController : CustomControllerBase
     {
@@ -45,11 +53,40 @@ namespace FreeCourse.PhotoStock.Controller
                 return CreateActionResultInstance(Response<NoContent>.Fail("Photo not found", 404));
             }
 
+<<<<<<< HEAD
             System.IO.File.Delete(photoUrl);
+=======
+            System.IO.File.Delete(path);
+>>>>>>> 9ec69e8db6b5c5aa767d48090463f294838d0d26
 
             return CreateActionResultInstance(Response<NoContent>.Success(204));
         }
 
+<<<<<<< HEAD
 
+=======
+        //[HttpGet]
+        //[AllowAnonymous]
+        //public IActionResult GetAll()
+        //{
+        //    var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/photos/");
+
+        //    var photoListPath = Directory.GetFiles(path);
+
+        //    if (!photoListPath.Any())
+        //    {
+        //        return CreateActionResultInstance(Response<NoContent>.Fail("Photos not founds", 404));
+        //    }
+
+        //    List<string> photoList = new List<string>();
+
+        //    foreach (var photoPath in photoListPath)
+        //    {
+        //        photoList.Add(photoPath.Split("photos/")[1]);
+        //    }
+
+        //    return CreateActionResultInstance(Response<List<string>>.Success(photoList,200));
+        //}
+>>>>>>> 9ec69e8db6b5c5aa767d48090463f294838d0d26
     }
 }

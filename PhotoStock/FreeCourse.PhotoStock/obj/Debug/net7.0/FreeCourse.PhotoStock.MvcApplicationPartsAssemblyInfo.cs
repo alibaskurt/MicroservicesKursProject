@@ -11,6 +11,10 @@
 using System;
 using System.Reflection;
 
+<<<<<<< HEAD
+=======
+[assembly: Microsoft.AspNetCore.Mvc.ApplicationParts.ApplicationPartAttribute("FreeCourse.Shared")]
+>>>>>>> 9ec69e8db6b5c5aa767d48090463f294838d0d26
 [assembly: Microsoft.AspNetCore.Mvc.ApplicationParts.ApplicationPartAttribute("Microsoft.AspNetCore.OpenApi")]
 [assembly: Microsoft.AspNetCore.Mvc.ApplicationParts.ApplicationPartAttribute("Swashbuckle.AspNetCore.SwaggerGen")]
 
