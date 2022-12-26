@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "8/94SRP/87Izcz65xxXmkwKx78LaDosU+ZRM+ULWAPk=",
+  "Source": "FreeCourse.PhotoStock",
+  "BasePath": "_content/FreeCourse.PhotoStock",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "FreeCourse.PhotoStock\\wwwroot",
+      "Source": "FreeCourse.PhotoStock",
+      "ContentRoot": "C:\\Users\\abaskurt\\Desktop\\MicroservicesKursProject\\MicroservicesKursProject\\PhotoStock\\FreeCourse.PhotoStock\\wwwroot\\",
+      "BasePath": "_content/FreeCourse.PhotoStock",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}
