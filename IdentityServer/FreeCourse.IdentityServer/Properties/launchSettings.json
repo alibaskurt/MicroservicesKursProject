@@ -7,7 +7,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "launchBrowser": false,
-      "launchBrowser": true
+      "launchBrowser": false
     }
   }
 }

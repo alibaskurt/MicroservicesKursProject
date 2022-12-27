@@ -26,6 +26,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PhotoStock", "PhotoStock", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeCourse.PhotoStock", "..\..\MicroservicesKursProject-photo_stock\PhotoStock\FreeCourse.PhotoStock\FreeCourse.PhotoStock.csproj", "{0C77E69C-CA26-42FB-B865-473521CB7EA6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{D6B34CF4-46A1-45BE-BFEE-E6F190F77EE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeCourse.Services.Basket", "Services\Basket\FreeCourse.Services.Basket\FreeCourse.Services.Basket.csproj", "{09D60CC0-AF4A-4D15-AD0C-9DDDFF35FE25}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +52,10 @@ Global
 		{0C77E69C-CA26-42FB-B865-473521CB7EA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C77E69C-CA26-42FB-B865-473521CB7EA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C77E69C-CA26-42FB-B865-473521CB7EA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09D60CC0-AF4A-4D15-AD0C-9DDDFF35FE25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09D60CC0-AF4A-4D15-AD0C-9DDDFF35FE25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09D60CC0-AF4A-4D15-AD0C-9DDDFF35FE25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09D60CC0-AF4A-4D15-AD0C-9DDDFF35FE25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +67,8 @@ Global
 		{8859E226-36DA-4DC1-8D39-07840068D843} = {C676D374-5B1B-4CBE-B47E-AAD2D9418A69}
 		{1E74A867-A652-49F8-911B-FF51263D636D} = {91A907E8-E72A-4202-9449-25DC8C750B64}
 		{0C77E69C-CA26-42FB-B865-473521CB7EA6} = {1E74A867-A652-49F8-911B-FF51263D636D}
+		{D6B34CF4-46A1-45BE-BFEE-E6F190F77EE9} = {91A907E8-E72A-4202-9449-25DC8C750B64}
+		{09D60CC0-AF4A-4D15-AD0C-9DDDFF35FE25} = {D6B34CF4-46A1-45BE-BFEE-E6F190F77EE9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E75FB163-099B-4C28-A5E5-1778988274A8}
