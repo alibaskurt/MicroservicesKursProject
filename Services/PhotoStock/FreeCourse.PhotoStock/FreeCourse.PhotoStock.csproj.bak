@@ -19,6 +19,8 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Shared\FreeCourse.Shared\FreeCourse.Shared.csproj" />
   </ItemGroup>
+    <ProjectReference Include="..\..\Shared\FreeCourse.Shared\FreeCourse.Shared.csproj" />
+  </ItemGroup>
 
   <ItemGroup>
     <Folder Include="wwwroot\photos\" />
