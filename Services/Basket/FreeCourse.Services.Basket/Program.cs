@@ -1,3 +1,4 @@
+using FreeCourse.Services.Basket.Services;
 using FreeCourse.Services.Basket.Settings;
 using Microsoft.Extensions.Options;
 
@@ -11,6 +12,17 @@ builder.Services.Configure<RedisSettings>(builder.Configuration.GetSection("Redi
 builder.Services.AddSingleton<IRedisSettings>(sp =>
 {
     return sp.GetRequiredService<IOptions<RedisSettings>>().Value;
+});
+
+builder.Services.AddSingleton<RedisService>(sp =>
+{
+    var redisSettings = sp.GetRequiredService<IOptions<RedisSettings>>().Value;
+
+    var redis = new RedisService(redisSettings.Host, redisSettings.Port);
+
+    redis.Connect();
+
+    return redis;
 });
 
 

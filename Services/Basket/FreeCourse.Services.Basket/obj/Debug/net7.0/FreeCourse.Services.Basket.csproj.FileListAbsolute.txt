@@ -34,3 +34,8 @@ C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Serv
 C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Basket\FreeCourse.Services.Basket\obj\Debug\net7.0\FreeCourse.Services.Basket.pdb
 C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Basket\FreeCourse.Services.Basket\obj\Debug\net7.0\FreeCourse.Services.Basket.genruntimeconfig.cache
 C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Basket\FreeCourse.Services.Basket\obj\Debug\net7.0\ref\FreeCourse.Services.Basket.dll
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Basket\FreeCourse.Services.Basket\bin\Debug\net7.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Basket\FreeCourse.Services.Basket\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Basket\FreeCourse.Services.Basket\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Basket\FreeCourse.Services.Basket\bin\Debug\net7.0\FreeCourse.Shared.dll
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Basket\FreeCourse.Services.Basket\bin\Debug\net7.0\FreeCourse.Shared.pdb
