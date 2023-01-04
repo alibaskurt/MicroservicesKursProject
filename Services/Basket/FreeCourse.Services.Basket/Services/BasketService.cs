@@ -25,7 +25,7 @@ namespace FreeCourse.Services.Basket.Services
 
             if (String.IsNullOrEmpty(existBasket))
             {
-                return Response<BasketDto>.Fail("Basket No found", 404);
+                return Response<BasketDto>.Fail("Basket not found", 404);
             }
             return Response<BasketDto>.Success(JsonSerializer.Deserialize<BasketDto>(existBasket), 200);
         }

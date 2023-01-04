@@ -39,3 +39,10 @@ C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Serv
 C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Basket\FreeCourse.Services.Basket\bin\Debug\net7.0\Newtonsoft.Json.dll
 C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Basket\FreeCourse.Services.Basket\bin\Debug\net7.0\FreeCourse.Shared.dll
 C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Basket\FreeCourse.Services.Basket\bin\Debug\net7.0\FreeCourse.Shared.pdb
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Basket\FreeCourse.Services.Basket\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Basket\FreeCourse.Services.Basket\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Basket\FreeCourse.Services.Basket\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Basket\FreeCourse.Services.Basket\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Basket\FreeCourse.Services.Basket\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Basket\FreeCourse.Services.Basket\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\abaskurt\Desktop\MicroservicesKursProject\MicroservicesKursProject\Services\Basket\FreeCourse.Services.Basket\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll

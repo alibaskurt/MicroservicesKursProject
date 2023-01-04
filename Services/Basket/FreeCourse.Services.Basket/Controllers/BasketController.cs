@@ -23,7 +23,6 @@ namespace FreeCourse.Services.Basket.Controllers
         [HttpGet]
         public async Task<IActionResult> GetBasket()
         {
-
             //UseId değeri JWT tokenın payloadından uzerinden alındı.(SUB değeri)
             var userId = _sharedIdentityService.GetUserId;
             var response = await _basketService.GetBasketByUserId(userId);

@@ -17,7 +17,7 @@ namespace FreeCourse.Services.Basket.Services
         public void Connect() => _connectionMultiplexer = ConnectionMultiplexer.Connect($"{_host}:{_port}");
 
         //Rediste 16 tane database gelir bunların farklı olmasının sebebi birinde test yap birinde gerçek veri tut bırınde stagging tut vs gibi.
-        //Default 1 veri tabanı verdim.
-        public IDatabase GetDatabase(int db = 1) => _connectionMultiplexer.GetDatabase(db);
+        //Default 0 veri tabanı verdim.
+        public IDatabase GetDatabase(int db = 0) => _connectionMultiplexer.GetDatabase(db);
     }
 }

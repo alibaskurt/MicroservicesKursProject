@@ -25,7 +25,10 @@ namespace FreeCourse.IdentityServer
             {
                 Scopes={ "photo_stock_fullpermission" }
             },
-
+            new ApiResource("resource_basket")
+            {
+                Scopes={ "basket_fullpermission" }
+            },
             //Signup metoduna erişim için scope tanımladık. //Identity server içindeki defoult tanımlamayı yaptık.
             new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
             {
@@ -54,6 +57,8 @@ namespace FreeCourse.IdentityServer
             {
                 new ApiScope("catalog_fullpermission","Catalog API için full erişim"),
                 new ApiScope("photo_stock_fullpermission","Photo Stock API için full erişim"),
+                new ApiScope("basket_fullpermission","Basket API için full erişim"),
+
                 //Sigup için oluşturulan scope
                 new ApiScope(IdentityServerConstants.LocalApi.ScopeName,"Asp.net mvc clientının sign up methoduna full erişim için tanımlandı")
             };
@@ -111,7 +116,8 @@ namespace FreeCourse.IdentityServer
                         IdentityServerConstants.StandardScopes.OpenId, 
                         IdentityServerConstants.StandardScopes.Profile,
                         //Refresh token donebilmek için tanımlandı. Kullanıcı o an login olmamıs olsada refresh token ile token alabiliriz.
-                        IdentityServerConstants.StandardScopes.OfflineAccess 
+                        IdentityServerConstants.StandardScopes.OfflineAccess,
+                        "basket_fullpermission"
                     },
                     //Access Token 1 saatliğine verilir.
                     AccessTokenLifetime = 1*60*60,
@@ -122,7 +128,8 @@ namespace FreeCourse.IdentityServer
                     AbsoluteRefreshTokenLifetime = (int)(DateTime.Now.AddDays(30)-DateTime.Now).TotalSeconds,
 
                     //Refresh token 1 kere kullanılmasın tekrar kullanılabilir olsun.
-                    RefreshTokenUsage = TokenUsage.ReUse
+                    RefreshTokenUsage = TokenUsage.ReUse,
+                    
 
                 }
             };

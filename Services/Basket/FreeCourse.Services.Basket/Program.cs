@@ -5,12 +5,18 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 
 var builder = WebApplication.CreateBuilder(args);
 
 
 //Bu micrsoservisi kullanýcak client mutlaka authentice olmuþ userId göndermek zorunda bunun için policy ekleyip controllera filter olarak bu policy'i ekliyoruz.
 var requireAuthenticationPolicy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
+
+//Sub yerine baþka bir url basmasýn token içerisine.
+JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Remove("sub");
 
 //appsettings klasorundeki redissettings property'si ile redissettings sýnýfýný doldurdum.
 builder.Services.Configure<RedisSettings>(builder.Configuration.GetSection("RedisSettings"));
@@ -39,10 +45,11 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
     //Public keyi de belirttiðimiz URL üzerinden alýcak.
     options.Authority = builder.Configuration["IdentityServerURL"];
 
-    //Gelen token aud içerisinde resource_catalog olmasý gerekiyor.
-    options.Audience = "resource_catalog";
+    options.Audience = "resource_basket";
 
     options.RequireHttpsMetadata = false;
+
+    
 
 });
 
