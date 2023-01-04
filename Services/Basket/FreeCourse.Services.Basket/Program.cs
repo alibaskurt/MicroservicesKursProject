@@ -1,5 +1,6 @@
 using FreeCourse.Services.Basket.Services;
 using FreeCourse.Services.Basket.Settings;
+using FreeCourse.Shared.Services;
 using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -24,6 +25,10 @@ builder.Services.AddSingleton<RedisService>(sp =>
 
     return redis;
 });
+
+builder.Services.AddHttpContextAccessor();
+
+builder.Services.AddScoped<ISharedIdentityService, SharedIdentityService>();
 
 
 builder.Services.AddControllers();
