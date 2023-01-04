@@ -1,10 +1,16 @@
 using FreeCourse.Services.Basket.Services;
 using FreeCourse.Services.Basket.Settings;
 using FreeCourse.Shared.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+//Bu micrsoservisi kullanýcak client mutlaka authentice olmuþ userId göndermek zorunda bunun için policy ekleyip controllera filter olarak bu policy'i ekliyoruz.
+var requireAuthenticationPolicy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
 
 //appsettings klasorundeki redissettings property'si ile redissettings sýnýfýný doldurdum.
 builder.Services.Configure<RedisSettings>(builder.Configuration.GetSection("RedisSettings"));
@@ -25,6 +31,20 @@ builder.Services.AddSingleton<RedisService>(sp =>
 
     return redis;
 });
+//Microservisi koruma altýna aldým 
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+{
+    //Token daðýtmaktan sorumlu arkadasý veriyoruz. Býzým Porjemizde IdentityServer Microservisi.
+    //Bu microservise private key ile imzalanmýþ bir token geldiðinde public key ile doðrulama yapýcak.
+    //Public keyi de belirttiðimiz URL üzerinden alýcak.
+    options.Authority = builder.Configuration["IdentityServerURL"];
+
+    //Gelen token aud içerisinde resource_catalog olmasý gerekiyor.
+    options.Audience = "resource_catalog";
+
+    options.RequireHttpsMetadata = false;
+
+});
 
 builder.Services.AddHttpContextAccessor();
 
@@ -32,7 +52,10 @@ builder.Services.AddScoped<IBasketService, BasketService>();
 builder.Services.AddScoped<ISharedIdentityService, SharedIdentityService>();
 
 
-builder.Services.AddControllers();
+builder.Services.AddControllers(opt =>
+{
+    opt.Filters.Add(new AuthorizeFilter(requireAuthenticationPolicy));
+});
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
